@@ -1,0 +1,514 @@
+body{
+    --hauptfarbe:#fff;
+    --colorButtonText:black;
+    --backgroundMenuItemHover:transparent;
+    --colorMenuItemHover:var(--sekundaerfarbe);
+    --backgroundFooter:var(--sekundaerfarbe);
+    --paragraph:24px;
+    --lineHeightParagraph: 32px;
+    --backgroundHeader:#ffffffde !important;
+    --backgroundBody:white;
+    --sv-small-fontsize:16px;
+    --sv-small-lineheight:16px;
+    --colorLinkHover:#740300;
+    --backgroundSubmenu:white;
+    --sv-setzten-radius:0 0 15px 15px;
+}
+
+/* *************
+    Header
+*/
+body.mb-transp-header header .widget_nav_menu ul.menu > li a{
+    text-shadow: none;
+    font-weight: 700;
+    font-size: var(--sv-small-fontsize);
+}
+
+header{
+    nav.menu-hauptmenue-container{
+        >ul.menu{
+            >li{
+                &:last-child{
+                    >a{
+                        padding-right: 0;
+                    }
+                }
+                &:hover{
+                    >a{
+                        color:black;
+                        text-decoration: underline;
+                        text-decoration-color: var(--sekundaerfarbe);
+                        text-decoration-thickness: 2px;
+                    }
+                }
+                
+                ul.sub-menu{
+                    border-radius: var(--sv-setzten-radius);
+                    overflow: hidden;
+                    li{
+                        border:2px solid black;
+                        a{
+                            padding:10px 25px;
+                            justify-content: center;
+                            color:black;
+                        }
+
+                        &:hover{
+                            a{
+                                color:white
+                            }
+                        }
+                    }
+                    li:not(:first-child){
+                        border-top:none
+                    }
+                    li:last-child{
+                        border-radius: var(--sv-setzten-radius)
+                    }
+                }
+            }
+
+            li.menu-item-search{
+                .bi-search{
+                    background: #fff;
+                    border-radius: 55%;
+                    padding: 6px;
+                    border: 2px solid #000;
+                    width: 32px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                &:hover{
+                    a{
+                        text-decoration: none;
+                        .bi-search{
+                            background-color: var(--sekundaerfarbe);
+                            &:before{
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .mbto-before-menu{
+        filter: invert(1);
+        max-width: 130px;
+    }
+}
+
+/* *************
+    Content
+*/
+.home{
+    h1{
+        font-size: 90px;
+        line-height: 85px;
+        margin-bottom: 40px;
+        font-weight: 700;
+
+        @media (max-width: 1024px){
+            font-size: 60px;
+
+            @media (max-width: 601px){
+                font-size: 50px;
+                line-height: 60px;
+            }
+        }
+    }
+
+    /*Mannschaft*/
+    #fp-team-squad-view{
+        background-color: transparent;
+        .fp-subheading-text,
+        >.fp-team-squad-view-position-group:not(:nth-child(4)){
+            display:none
+        }
+        >.fp-team-squad-view-position-group{
+            .fp-team-squad-view-position-group-players{
+                display: flex;
+                overflow: hidden;
+            }
+        }
+    }
+    #fp-widget-footer{
+        background-color: transparent;
+    }
+
+    .post-content{
+        margin-bottom:0
+    }
+}
+
+main{
+    /*Fonts*/
+    h2, h3, h4, h5, h6{
+        font-size: var(--paragraph);
+        line-height:  var(--lineHeightParagraph);
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    /*Buttons*/
+    .loop-wrapper .loop-more,
+    .loop + .pagination-wrap .more .more-link,
+    form input[type="submit"],
+    .wp-element-button{
+        border-radius: 55px;
+        border:2px solid black;
+        font-size: var(--paragraph);
+        padding: 10px 40px;
+        &:hover{
+            border-color:var(--colorButtonHover)
+        }
+    }
+
+    /*Hinweise*/
+    .hinweis-wrapper{
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        >div{
+            border:2px solid black;
+            padding:10px 30px;            
+
+            p{
+                font-size: var(--sv-small-fontsize);
+                line-height: var(--sv-small-lineheight);
+            }
+            &:first-child{
+                border-radius:0 15px 15px 0;
+                display: flex;
+                align-items: center;
+                min-width: 225px;
+                .mbfse-group-link{
+                    
+                }
+            }
+            &:last-child{
+                border-radius:15px 0 0 15px;
+                border-color:var(--sekundaerfarbe);
+            }
+        }
+    }
+
+    /*Mitglied-Banner*/
+    .mitglied-banner{
+        background-size:100% 100% !important;
+
+        >div{
+            max-width: calc(var(--wp--style--global--wide-size) - 80px);
+            .wp-element-button{
+                color:var(--sekundaerfarbe);
+                border-color: transparent;
+                &:hover{
+                    color:white;
+                    background-color: black;
+                }
+            }
+            @media (max-width: 768px){
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    }
+
+    /*Mannschaft entdecken*/
+    .mannschafts-wrap{
+        z-index:11;
+        background-size:100% 100% !important;
+        >div>p{
+            margin-left: 0 !important;
+        }
+
+        .zur-mannschaft-button{
+            display: flex;
+            flex-direction: row-reverse;
+
+            &.mb-button-icon.bi:before,
+            *{
+                color:black;
+            }
+            &.mb-button-icon.bi:before{
+                right: 10px;
+            }
+
+            a{
+                text-align: left;
+            }
+        }
+    }
+
+    /*Wolke*/
+    .wp-block-cover.alignfull.no-distance-bottom.mb-parallax{
+        overflow: visible;
+        z-index: 10;
+        
+        @media (max-width: 768px){
+            img{
+                object-fit: contain;
+                height: auto;
+                
+            }
+        }
+   }
+
+    /*Formular*/
+    form{
+        max-width: var(--textMaxWidth);
+        input[type="email"],
+        input[type="text"],
+        textarea{
+            background-color: white !important;
+        }
+
+        .html-wrap p{
+            font-size: var(--sv-small-fontsize);
+            line-height: var(--sv-small-lineheight);
+        }
+    }
+
+    /*mehr Beitragsbutton*/
+    .pagination-wrap{
+        width: 100%;
+        .more-link,
+        .more{
+            width: 100%;
+        }
+        .more-link{
+            font-size: var(--sv-small-fontsize) !important; 
+            text-align: left !important;
+            &:after{
+                content:"\F231";
+                font-family: "bootstrap-icons";
+                position: absolute;
+                right: 10px;
+            }
+        }
+    }
+
+    /*Hero*/
+    @media (max-width: 480px){
+        .wp-block-cover__inner-container{
+            padding:0
+        }
+
+        .mitglied-banner > .wp-block-group{
+            padding:20px !important
+        }
+    }
+    
+}
+
+/*DSI Werbebanner Hero*/
+h1 + .wp-block-cover.alignfull{
+    overflow: inherit;
+}
+.dsi-werber{
+	margin-top: calc(var(--abstandUntenContainer) * -1);
+	transition: all .3s ease;
+	position: absolute;
+    backdrop-filter: brightness(0.4);
+    mix-blend-mode: hard-light;
+    bottom: -100%;
+    left: -110%;
+    @media (max-width: 601px){
+        max-width: calc(100% - var(--abstandGridItems));
+    }
+
+    @media (max-width: 480px){
+        bottom: -65%;
+        max-width: 100%
+    }
+
+    @media (max-width: 414px){
+        bottom: -50%;
+    }
+    &.view{
+        left: var(--abstandSeiten);
+        @media (max-width: 480px){
+            left: 0;
+        }
+    }
+    
+}
+
+
+/*Beitragskacheln*/
+.loop{
+    article{
+        border-radius: var(--sv-setzten-radius);
+        border:2px solid black;
+        box-shadow: none;
+        .loop-date{
+            display:none;
+        }
+        .loop-title{
+            margin-left: 0;
+        }
+        .loop-more{
+            width: fit-content;
+            margin-left: var(--abstandSeitenLoop);
+            text-decoration: none;
+            font-size: var(--sv-small-fontsize);
+            padding: 10px 40px;
+            text-transform: uppercase;
+            &:after{
+                display:none
+            }
+        }
+    }
+}
+
+.kontakt form{
+    margin: 0 auto var(--abstandUntenContainer);
+}
+
+.download {
+    a.mbfse-group-link:hover + .wp-block-modulbuero-bootstrap-icons{
+        >div{
+            p{
+                color:var(--colorLinkHover)
+            }
+        }
+
+    }
+}
+
+body.mb-transp-header .post-content > h1:first-child{
+    padding-top:calc(var(--abstandUntenHeadline) + var(--headerHeight));
+}
+
+.teams-abteilungen{
+    .post-content{
+        .wp-block-buttons .wp-block-button__link{
+            min-width: 270px;
+        }
+    }
+}
+
+/*Formular*/
+article .post-content .nf-field {
+    .date-wrap .nf-field-label, 
+    .list-select-wrap .nf-field-label{
+        top:-21px !important
+    }
+}
+.field-wrap select{
+    border: 1px solid #c4c4c4;
+    background-color: #fff;
+}
+.nf-field-container .nf-field-description p{
+    font-size: var(--sv-small-fontsize);
+    line-height: var(--sv-small-lineheight);
+    margin-left: 15px;
+}
+
+/* *************
+    Footer
+*/
+footer{
+    .footer-sidebar-backend{
+        >div{
+            >div{
+                *{
+                    color:white;
+                    font-size: var(--sv-small-fontsize);
+                }
+                >figure{
+                    img{
+                        max-height: 100px;
+                        width: auto;
+                    }
+                    &.mb-logo{
+                        display: flex;
+                        gap: 24px;
+                        &:after{
+                            content: "";
+                            position: relative;
+                            display:block;
+                            height:51px;
+                            width:1px;
+                            background-color: white;
+                        }   
+                    }
+                }
+                >.wp-block-group{
+                    flex:1;
+                    align-items: flex-end;
+                    gap:5px;
+                     @media (max-width: 480px){
+                        gap:15px;
+                     }
+                    nav{
+                        &.menu-footer-container{
+                            ul{
+                                display: flex;
+                                gap: 20px;
+                                
+                                li:not(:last-child):after{
+                                    content:"//";
+                                    padding-left:20px;
+                                }
+
+                                @media (max-width: 601px){
+                                    gap: 40px;
+                                    margin: 40px 0;
+                                    align-items: flex-start;
+                                    li:not(:last-child):after{
+                                        content:""
+                                    }
+                                }
+                            }
+                        }
+
+                        ul.menu {
+                            a,
+                            li {
+                                padding:0;
+                                text-align: right;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+                .mbgi-block .socialmedia-wrap a{
+                    background-color: transparent;
+                    width: auto;
+                    height:auto;
+                    i:before{
+                        color:#fff;
+                    }
+                    &:not(:last-child){
+                        margin-right: 25px;
+                    }
+                }
+
+                @media (max-width: 768px){
+                    flex-wrap: wrap;
+                    >.wp-block-group{
+                        flex-basis: 100%;
+                        order: -1;
+                        align-items: flex-start;
+                    }
+
+                    @media (max-width: 480px){
+                        flex-direction: column;
+                        align-items: flex-start;
+                        .mb-logo::after{
+                            display:none !important
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    #corporate-copyright,
+    .footer-sidebar-wrap{
+        display: none !important;
+    }
+}
