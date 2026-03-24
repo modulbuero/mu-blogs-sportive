@@ -1,10 +1,51 @@
 @charset "UTF-8";
+:root {
+  --abstandUntenContainer: 80px;
+}
+
 /**
 *   HEADER / Memü
 */
 /**
 *   INHALT
 */
+main {
+  /*Fonts*/
+  --wp--preset--font-size--large:40px;
+  --wp--preset--font-size--medium:20px;
+  --wp--preset--font-size--small:16px;
+}
+main h2, main h3 {
+  font-size: var(--wp--preset--font-size--large);
+  line-height: 52px !important;
+  font-weight: bold;
+}
+main h6 {
+  font-size: var(--wp--preset--font-size--medium);
+  line-height: 32px !important;
+  font-weight: normal;
+}
+main p {
+  font-size: var(--wp--preset--font-size--small);
+  line-height: 24px !important;
+}
+main {
+  /* buttons */
+}
+main .wp-block-button__link {
+  font-size: var(--wp--preset--font-size--small);
+  line-height: 19px !important;
+  color: var(--sekundaerfarbe) !important;
+  font-weight: normal;
+}
+main .wp-block-cover__inner-container {
+  width: 45% !important;
+  margin-left: 0;
+}
+main .wp-block-cover__inner-container .has-white-background-color {
+  padding: 70px !important;
+}
+
 /**
 *   FOOTER
 *//*# sourceMappingURL=style.css.map */

@@ -1,3 +1,7 @@
+:root {
+    --abstandUntenContainer: 80px;
+}
+
 /**
 *   HEADER / Memü
 */
@@ -9,7 +13,43 @@ header{
 *   INHALT
 */
 main{
+    /*Fonts*/
+	--wp--preset--font-size--large:40px;
+	--wp--preset--font-size--medium:20px;
+	--wp--preset--font-size--small:16px;
 
+    h2, h3 {
+        font-size: var(--wp--preset--font-size--large);
+        line-height: 52px !important;
+        font-weight: bold;
+    }
+
+    h6 {
+        font-size: var(--wp--preset--font-size--medium);
+        line-height: 32px !important;
+        font-weight: normal;
+    }
+
+    p {
+        font-size: var(--wp--preset--font-size--small);
+        line-height: 24px !important;
+    }
+
+    /* buttons */
+    .wp-block-button__link {
+        font-size: var(--wp--preset--font-size--small);
+        line-height: 19px !important;
+        color: var(--sekundaerfarbe) !important; 
+        font-weight: normal;
+    }
+
+    .wp-block-cover__inner-container {
+        width: 45% !important;
+        margin-left: 0;
+        .has-white-background-color {
+            padding: 70px !important;
+        }
+    }
 }
 
 /**
