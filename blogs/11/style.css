@@ -81,6 +81,21 @@ main .swiper .swiper-button-next:after, main .swiper .swiper-button-prev:after {
   font-size: var(--wp--preset--font-size--small);
   color: var(--wp--preset--color--secondary);
 }
+main .möglichkeiten {
+  padding-bottom: 45px;
+  padding-top: 45px;
+}
+main .möglichkeiten .wp-block-column {
+  box-shadow: 0px 10px 20px rgba(43, 52, 86, 0.1019607843);
+  padding: 40px 50px;
+}
+main .möglichkeiten .wp-block-column p {
+  margin-bottom: 0 !important;
+}
+main .möglichkeiten .wp-block-column .wp-block-buttons {
+  position: absolute;
+  bottom: 30px;
+}
 
 /**
 *   FOOTER
