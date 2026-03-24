@@ -1,5 +1,5 @@
 :root {
-    --abstandUntenContainer: 80px;
+    --abstandUntenContainer: 200px;
 }
 
 /**
@@ -48,6 +48,13 @@ main{
         margin-left: 0;
         .has-white-background-color {
             padding: 70px !important;
+        }
+    }
+
+    .is-content {
+        box-shadow: 0px 10px 20px #2B34561A;
+        .has-white-background-color {
+            padding: 70px 90px !important;
         }
     }
 }
