@@ -74,8 +74,9 @@ main{
         }
     }
     .swiper {
-        box-shadow: 0px 10px 20px #2B34561A;
         --swiper-navigation-sides-offset:0;
+        box-shadow: 0px 10px 20px #2B34561A;
+        max-width: 834px !important;
         .swiper-pagination {
             display: none;
         }

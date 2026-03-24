@@ -58,8 +58,9 @@ main .is-content .has-white-background-color {
   padding: 70px 90px !important;
 }
 main .swiper {
-  box-shadow: 0px 10px 20px rgba(43, 52, 86, 0.1019607843);
   --swiper-navigation-sides-offset:0;
+  box-shadow: 0px 10px 20px rgba(43, 52, 86, 0.1019607843);
+  max-width: 834px !important;
 }
 main .swiper .swiper-pagination {
   display: none;
