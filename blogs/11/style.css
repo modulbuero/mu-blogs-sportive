@@ -44,6 +44,19 @@ main .wp-block-button__link {
   color: var(--sekundaerfarbe) !important;
   font-weight: normal;
 }
+main .pre-header {
+  z-index: 111;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  z-index: 1111;
+  top: -70px;
+  background: #fff;
+  padding: 30px;
+}
+main .mbfse-hero {
+  height: calc(100vh - 144px);
+  margin-top: -70px;
+}
 main .wp-block-cover__inner-container {
   width: 45% !important;
   margin-left: 0;

@@ -28,7 +28,6 @@ main{
 	--wp--preset--font-size--large:40px;
 	--wp--preset--font-size--medium:20px;
 	--wp--preset--font-size--small:16px;
-
     h1 {
         font-size: var(--wp--preset--font-size--x--large);
         line-height: 52px !important;
@@ -59,6 +58,20 @@ main{
         font-weight: normal;
     }
 
+    .pre-header{
+        z-index: 111;
+        padding-bottom:30px;
+        padding-top:30px;
+        z-index: 1111;
+        top: -70px;        
+        background: #fff;
+        padding: 30px;
+    }
+
+    .mbfse-hero{
+        height:calc(100vh - 144px);
+        margin-top:-70px;
+    }
     .wp-block-cover__inner-container {
         width: 45% !important;
         margin-left: 0;
