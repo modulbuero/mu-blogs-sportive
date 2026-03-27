@@ -30,7 +30,7 @@ main{
 	--wp--preset--font-size--small:16px;
     --lineHeightParagraph: 1.5;
     --buttonInner:16px 20px;
-    --colorButton:var(--colorLink);
+    --colorButton:var(--hauptfarbe);
     --colorButtonText:var(--sekundaerfarbe);
 
     h1,
@@ -150,5 +150,6 @@ main{
 *   FOOTER
 */
 footer{
-
+    --backgroundFooter:var(--menufarbe);
+    --colorMenuItem:#fff;
 }
