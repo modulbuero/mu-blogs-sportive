@@ -104,16 +104,23 @@ main{
     .möglichkeiten {
         .wp-block-column {
             box-shadow: 0px 10px 20px #2B34561A;
-            padding: 40px 50px;
+            padding: 50px 40px 40px;
+            display: flex;
+            flex-direction: column;
+            h3{
+                margin-left: 0;
+            }
             p{
-                margin-bottom: 0 !important;
+                margin-bottom: 60px !important;
             }
             .wp-block-buttons {
-                position: absolute;
-                bottom: 30px;
+                margin-top:auto;   
+                width: 100%;
+                .wp-block-button{
+                    width: 100%;
+                }        
             }
         }
-       
     }
 
 }

@@ -92,14 +92,22 @@ main .swiper .swiper-button-next:after, main .swiper .swiper-button-prev:after {
 }
 main .möglichkeiten .wp-block-column {
   box-shadow: 0px 10px 20px rgba(43, 52, 86, 0.1019607843);
-  padding: 40px 50px;
+  padding: 50px 40px 40px;
+  display: flex;
+  flex-direction: column;
+}
+main .möglichkeiten .wp-block-column h3 {
+  margin-left: 0;
 }
 main .möglichkeiten .wp-block-column p {
-  margin-bottom: 0 !important;
+  margin-bottom: 60px !important;
 }
 main .möglichkeiten .wp-block-column .wp-block-buttons {
-  position: absolute;
-  bottom: 30px;
+  margin-top: auto;
+  width: 100%;
+}
+main .möglichkeiten .wp-block-column .wp-block-buttons .wp-block-button {
+  width: 100%;
 }
 
 /**
