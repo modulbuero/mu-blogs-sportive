@@ -22,6 +22,11 @@ header{
     #header-logo img{
         height:60px;
     }
+    #menu-hauptmenue{
+        li:last-child{
+            background:var(--hauptfarbe);
+        }
+    }
 }
 
 /**
