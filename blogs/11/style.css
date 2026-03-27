@@ -132,11 +132,37 @@ main .wp-block-cover__inner-container .has-white-background-color {
     display: none;
   }
 }
-main .is-content {
+main .carts-wrapper .wp-block-column:nth-child(2) {
   box-shadow: 0px 10px 20px rgba(43, 52, 86, 0.1019607843);
 }
-main .is-content .has-white-background-color {
+main .carts-wrapper .wp-block-column:nth-child(2) .has-white-background-color {
   padding: 70px 90px;
+}
+@media (min-width: 1150px) and (max-width: 1350px) {
+  main .carts-wrapper .wp-block-column:nth-child(2) .has-white-background-color {
+    padding: 20px 35px;
+  }
+}
+@media (max-width: 1150px) {
+  main .carts-wrapper .wp-block-column:nth-child(2) .has-white-background-color {
+    padding: 0;
+  }
+}
+@media (max-width: 1150px) {
+  main .carts-wrapper .wp-block-columns {
+    display: flex;
+    flex-direction: column;
+  }
+  main .carts-wrapper .wp-block-columns .wp-block-column {
+    left: unset !important;
+    box-shadow: none;
+  }
+  main .carts-wrapper .wp-block-columns .wp-block-column img {
+    width: 100%;
+  }
+  main .carts-wrapper .wp-block-columns .wp-block-column > div {
+    background-image: none !important;
+  }
 }
 main .swiper {
   --swiper-navigation-sides-offset:0;
