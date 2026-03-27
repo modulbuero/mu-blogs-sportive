@@ -30,6 +30,8 @@ main{
 	--wp--preset--font-size--small:16px;
     --lineHeightParagraph: 1.5;
     --buttonInner:16px 20px;
+    --colorButton:var(--colorLink);
+    --colorButtonText:var(--sekundaerfarbe);
 
     h1,
     h2 {
@@ -47,11 +49,20 @@ main{
     }
 
     /* buttons */
+    .nf-form-content input[type=submit],
     .wp-block-button__link {
         font-size: var(--wp--preset--font-size--small);
-        color: var(--sekundaerfarbe) !important; 
         text-transform: inherit;
         font-weight: 400;
+    }
+    .wp-block-button.is-style-outline{
+        a{
+            background-color: #fff;
+            &:hover{
+                background-color: var(--colorFont);
+                color:var(--colorLink);
+            }
+        }
     }
 
     .pre-header{
@@ -123,6 +134,16 @@ main{
         }
     }
 
+    /*Form SubmitButton*/
+    .nf-form-content .submit-wrap{
+        text-align: center;
+        input[type=submit]{
+            border:none;
+            &:hover{
+                color:#fff;
+            }
+        }
+    }
 }
 
 /**

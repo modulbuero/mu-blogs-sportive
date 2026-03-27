@@ -17,6 +17,8 @@ main {
   --wp--preset--font-size--small:16px;
   --lineHeightParagraph: 1.5;
   --buttonInner:16px 20px;
+  --colorButton:var(--colorLink);
+  --colorButtonText:var(--sekundaerfarbe);
 }
 main h1,
 main h2 {
@@ -34,11 +36,18 @@ main p {
 main {
   /* buttons */
 }
+main .nf-form-content input[type=submit],
 main .wp-block-button__link {
   font-size: var(--wp--preset--font-size--small);
-  color: var(--sekundaerfarbe) !important;
   text-transform: inherit;
   font-weight: 400;
+}
+main .wp-block-button.is-style-outline a {
+  background-color: #fff;
+}
+main .wp-block-button.is-style-outline a:hover {
+  background-color: var(--colorFont);
+  color: var(--colorLink);
 }
 main .pre-header {
   z-index: 111;
@@ -108,6 +117,18 @@ main .möglichkeiten .wp-block-column .wp-block-buttons {
 }
 main .möglichkeiten .wp-block-column .wp-block-buttons .wp-block-button {
   width: 100%;
+}
+main {
+  /*Form SubmitButton*/
+}
+main .nf-form-content .submit-wrap {
+  text-align: center;
+}
+main .nf-form-content .submit-wrap input[type=submit] {
+  border: none;
+}
+main .nf-form-content .submit-wrap input[type=submit]:hover {
+  color: #fff;
 }
 
 /**
