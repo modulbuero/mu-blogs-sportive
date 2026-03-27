@@ -6,6 +6,15 @@
 /**
 *   HEADER / Memü
 */
+header {
+  --backgroundHeader:#fff;
+  --abstandMenuItem: 10px 25px;
+  --colorMenuItemHover:var(--hauptfarbe);
+}
+header #header-logo img {
+  height: 60px;
+}
+
 /**
 *   INHALT
 */
