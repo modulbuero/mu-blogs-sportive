@@ -111,9 +111,10 @@ main{
             display: none;
         }
         .swiper-wrapper .has-white-background-color{
-            padding-top: 0 !important;
+            padding-top: 40px !important;
             padding-bottom: 60px !important;
-            h1 {
+            h3 {
+                font-size: var(--wp--preset--font-size--x--large);
                 color: var(--hauptfarbe);
             }
         }
