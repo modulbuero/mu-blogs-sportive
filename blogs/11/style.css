@@ -25,8 +25,11 @@ main {
   /*Fonts*/
   --wp--preset--font-size--x--large:60px;
   --wp--preset--font-size--large:40px;
+  --wp--preset--font-size--tablet--large:30px;
   --wp--preset--font-size--medium:20px;
+  --wp--preset--font-size--tablet--medium:18px;
   --wp--preset--font-size--small:16px;
+  --wp--preset--font-size--tablet--small:14px;
   --lineHeightParagraph: 1.5;
   --buttonInner:16px 20px;
   --colorButton:var(--hauptfarbe);
@@ -38,12 +41,30 @@ main h2 {
   font-size: var(--wp--preset--font-size--large);
   font-weight: 700;
 }
+@media (max-width: 950px) {
+  main h1,
+  main h2 {
+    font-size: var(--wp--preset--font-size--tablet--large);
+  }
+}
 main h3 {
   font-size: var(--wp--preset--font-size--medium);
+}
+@media (max-width: 950px) {
+  main h3 {
+    font-size: var(--wp--preset--font-size--tablet--medium);
+  }
+}
+main h3 {
   font-weight: 700;
 }
 main p {
   font-size: var(--wp--preset--font-size--small);
+}
+@media (max-width: 950px) {
+  main p {
+    font-size: var(--wp--preset--font-size--tablet--small);
+  }
 }
 main {
   /* buttons */
@@ -51,6 +72,15 @@ main {
 main .nf-form-content input[type=submit],
 main .wp-block-button__link {
   font-size: var(--wp--preset--font-size--small);
+}
+@media (max-width: 950px) {
+  main .nf-form-content input[type=submit],
+  main .wp-block-button__link {
+    font-size: var(--wp--preset--font-size--tablet--small);
+  }
+}
+main .nf-form-content input[type=submit],
+main .wp-block-button__link {
   text-transform: inherit;
   font-weight: 400;
 }
@@ -70,16 +100,37 @@ main .pre-header {
   background: #fff;
   padding: 30px;
 }
+main .banner {
+  display: none;
+}
 main .mbfse-hero {
   height: calc(100vh - 144px);
   margin-top: -70px;
 }
 main .wp-block-cover__inner-container {
-  width: 45% !important;
   margin-left: 0;
+  width: 50% !important;
+  margin-top: auto !important;
+  margin-bottom: auto !important;
 }
 main .wp-block-cover__inner-container .has-white-background-color {
-  padding: 70px !important;
+  padding: 20px !important;
+}
+@media (min-width: 1301px) {
+  main .wp-block-cover__inner-container {
+    width: 45% !important;
+  }
+  main .wp-block-cover__inner-container .has-white-background-color {
+    padding: 70px !important;
+  }
+}
+@media (max-width: 1023px) {
+  main .banner {
+    display: block;
+  }
+  main .wp-block-cover__inner-container {
+    display: none;
+  }
 }
 main .is-content {
   box-shadow: 0px 10px 20px rgba(43, 52, 86, 0.1019607843);

@@ -36,8 +36,11 @@ main{
     /*Fonts*/
     --wp--preset--font-size--x--large:60px;
 	--wp--preset--font-size--large:40px;
+    --wp--preset--font-size--tablet--large:30px;
 	--wp--preset--font-size--medium:20px;
+    --wp--preset--font-size--tablet--medium:18px;
 	--wp--preset--font-size--small:16px;
+    --wp--preset--font-size--tablet--small:14px;
     --lineHeightParagraph: 1.5;
     --buttonInner:16px 20px;
     --colorButton:var(--hauptfarbe);
@@ -48,20 +51,32 @@ main{
         padding-top:0;
         font-size: var(--wp--preset--font-size--large);
         font-weight: 700;
+        @media (max-width: 950px) {
+            font-size: var(--wp--preset--font-size--tablet--large);
+        }
     }
     h3 {
         font-size: var(--wp--preset--font-size--medium);
+        @media (max-width: 950px) {
+            font-size: var(--wp--preset--font-size--tablet--medium);
+        }
         font-weight: 700;
     }
 
     p {
         font-size: var(--wp--preset--font-size--small);
+        @media (max-width: 950px) {
+            font-size: var(--wp--preset--font-size--tablet--small);
+        }
     }
 
     /* buttons */
     .nf-form-content input[type=submit],
     .wp-block-button__link {
         font-size: var(--wp--preset--font-size--small);
+        @media (max-width: 950px) {
+            font-size: var(--wp--preset--font-size--tablet--small);
+        }
         text-transform: inherit;
         font-weight: 400;
     }
@@ -85,17 +100,42 @@ main{
         padding: 30px;
     }
 
+    .banner {
+        display: none;
+    }
+
     .mbfse-hero{
         height:calc(100vh - 144px);
         margin-top:-70px;
     }
     .wp-block-cover__inner-container {
-        width: 45% !important;
         margin-left: 0;
+        width: 50% !important;
+        margin-top: auto !important;
+        margin-bottom: auto !important;
         .has-white-background-color {
-            padding: 70px !important;
+            padding: 20px !important;
         }
     }
+    @media (min-width: 1301px) {
+        .wp-block-cover__inner-container {
+            width: 45% !important;
+            .has-white-background-color {
+                padding: 70px !important;
+            }
+        }
+    }
+
+    @media (max-width: 1023px) {
+        .banner {
+            display: block;
+        }
+        .wp-block-cover__inner-container {
+            display: none;
+        }
+    }
+
+    
 
     .is-content {
         box-shadow: 0px 10px 20px #2B34561A;
