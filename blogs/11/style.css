@@ -41,6 +41,9 @@ main {
     --wp--preset--font-size--medium:18px;
     --wp--preset--font-size--small:14px;
   }
+  main p br {
+    display: none;
+  }
 }
 main h1,
 main h2 {
@@ -177,6 +180,7 @@ main .bild-text-wrapper .wp-block-column:nth-child(1) figure {
 main .bild-text-wrapper .wp-block-column:nth-child(1) figure img {
   -o-object-fit: cover;
      object-fit: cover;
+  height: 100%;
 }
 @media (max-width: 601px) {
   main .bild-text-wrapper .wp-block-column:nth-child(1) figure {
@@ -309,6 +313,10 @@ main .nf-form-content .submit-wrap input[type=submit]:hover {
 }
 main {
   /*Gallery*/
+}
+main .wp-block-gallery.columns-6.mb-lightbox figure {
+  width: 100%;
+  max-width: 100% !important;
 }
 @media (max-width: 601px) {
   main .wp-block-gallery.columns-6 {
