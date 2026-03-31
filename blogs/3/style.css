@@ -124,6 +124,13 @@ header.set-bgcolor .header-sidebar-wrap nav.menu-hauptmenue-container > ul.menu 
   color: #000;
 }
 
+body:not(.home) header {
+  --colorMenuItem:#000;
+}
+body:not(.home) header .header-sidebar-wrap nav.menu-hauptmenue-container > ul.menu > li:hover > a {
+  color: #000;
+}
+
 /* *************
     Content
 */
@@ -394,10 +401,6 @@ main .mbgi-block.mbgi-block-post-loop article:last-child data:after {
 
 .download a.mbfse-group-link:hover + .wp-block-modulbuero-bootstrap-icons > div p {
   color: var(--colorLinkHover);
-}
-
-body.mb-transp-header .post-content > h1:first-child {
-  padding-top: var(--abstandUntenHeadline);
 }
 
 main .hinweis-wrapper > div:last-child {

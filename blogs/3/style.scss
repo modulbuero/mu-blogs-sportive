@@ -141,6 +141,15 @@ header{
     }
 }
 
+body:not(.home) header{
+    
+        --colorMenuItem:#000;
+        .header-sidebar-wrap nav.menu-hauptmenue-container > ul.menu > li:hover > a{
+            color:#000;
+        }
+    
+}
+
 /* *************
     Content
 */
@@ -431,9 +440,7 @@ main{
     }
 }
 
-body.mb-transp-header .post-content > h1:first-child{
-    padding-top:var(--abstandUntenHeadline);
-}
+
 
 main .hinweis-wrapper > div:last-child{
     border-color: #000;
