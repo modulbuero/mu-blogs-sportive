@@ -110,6 +110,31 @@ main{
         top: -70px;        
         background: #fff;
         padding: 30px;
+        .only-mobile{
+            display:none;
+        }
+        @media (max-width: 601px){
+            >figure{
+                display:none !important
+            }
+            .only-mobile{
+                display:flex;
+                align-items: center;
+                >figure{
+                    margin:0 !important
+                }
+                >div{
+                    margin-right:0 !important;
+                    background: var(--hauptfarbe);
+                    width: 35px;
+                    height: 35px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+        
     }
 
     /*Hero*/

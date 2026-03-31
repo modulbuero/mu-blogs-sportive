@@ -103,6 +103,30 @@ main .pre-header {
   background: #fff;
   padding: 30px;
 }
+main .pre-header .only-mobile {
+  display: none;
+}
+@media (max-width: 601px) {
+  main .pre-header > figure {
+    display: none !important;
+  }
+  main .pre-header .only-mobile {
+    display: flex;
+    align-items: center;
+  }
+  main .pre-header .only-mobile > figure {
+    margin: 0 !important;
+  }
+  main .pre-header .only-mobile > div {
+    margin-right: 0 !important;
+    background: var(--hauptfarbe);
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
 main {
   /*Hero*/
 }
