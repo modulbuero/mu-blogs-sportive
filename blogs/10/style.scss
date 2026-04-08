@@ -194,6 +194,8 @@ main{
     }
 
     /*Buttons*/
+    .wc-block-cart__submit-button,
+    .type-product .single_add_to_cart_button.button,
     .loop-wrapper .loop-more,
     .loop + .pagination-wrap .more .more-link,
     form input[type="submit"],
@@ -210,6 +212,9 @@ main{
     }
     .mb-button-outline .wp-element-button{
         border:2px solid black;
+    }
+    .wc-block-cart__submit-button{
+        background-color: transparent;
     }
 
     /*Hinweise*/
@@ -570,6 +575,19 @@ main .mitglied-banner > div .wp-element-button{
 .kontaktwrap{
     z-index: 10;
 }
+
+/* *************
+    Woocommerce
+*/
+.woocommerce{
+    --minute-border-color:var(--sekundaerfarbe);
+    --minute-selected-bgcolor:var(--sekundaerfarbe);
+    button.button.alt{
+        background-color: transparent;
+        color:var(--colorButtonText)
+    }
+}
+
 /* *************
     Footer
 */

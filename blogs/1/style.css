@@ -1,0 +1,117 @@
+@charset "UTF-8";
+/*Vörderferein Niedersachsen*/
+.page-id-1008 {
+  --wp--preset--color--contrast: #000000;
+  --wp--preset--color--tertiary: #A3D5D3;
+  --satzspiegel:1440px;
+  --satzspiegel-short:1170px;
+  --mbfse--margin-bottom-inline:50px;
+  --has-large-font-size:39px;
+  --wp--preset--font-size--large:var(--has-large-font-size);
+}
+.page-id-1008 header, .page-id-1008 footer {
+  display: none !important;
+}
+.page-id-1008 main {
+  margin-top: var(--mbfse--margin-bottom-block) !important;
+  margin-bottom: var(--mbfse--margin-bottom-block) !important;
+}
+.page-id-1008 main h1, .page-id-1008 main h2 {
+  font-size: 95px;
+  margin-bottom: 30px;
+}
+.page-id-1008 main p {
+  max-width: var(--satzspiegel-short) !important;
+}
+.page-id-1008 main .wp-block-group.alignfull {
+  padding-left: var(--wp--style--root--padding-left);
+  padding-right: var(--wp--style--root--padding-left);
+}
+.page-id-1008 main {
+  /*Tabelle*/
+}
+.page-id-1008 main .wp-block-table {
+  max-width: var(--satzspiegel-short);
+  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.1019607843);
+}
+.page-id-1008 main .wp-block-table table tbody tr td:last-child,
+.page-id-1008 main .wp-block-table table thead tr th:last-child {
+  background-color: transparent;
+}
+.page-id-1008 main .wp-block-table table thead {
+  border: none;
+}
+.page-id-1008 main .wp-block-table table thead tr th {
+  background-color: var(--wp--preset--color--tertiary) !important;
+  color: #fff;
+  font-weight: 600 !important;
+}
+.page-id-1008 main .wp-block-table table td, .page-id-1008 main .wp-block-table table th {
+  padding: 20px !important;
+  font-weight: 400 !important;
+  font-size: 18px;
+}
+.page-id-1008 main .vorteile.mb-scrollHorizontal > div {
+  background-color: rgba(0, 0, 0, 0.0588235294) !important;
+}
+.page-id-1008 main {
+  /*Pakete*/
+}
+.page-id-1008 main .wp-block-post-content .zwei-pakete .wp-block-image.alignright {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.page-id-1008 main .wp-block-post-content .zwei-pakete > div {
+  box-shadow: none !important;
+  padding-bottom: 60px;
+}
+.page-id-1008 main .wp-block-post-content .zwei-pakete > div .bi-arrow-right {
+  line-height: 1;
+  font-size: 24px !important;
+}
+.page-id-1008 main .wp-block-post-content .zwei-pakete > div:nth-child(2):before {
+  content: "Empfehlung" !important;
+  font-weight: 600;
+}
+.page-id-1008 main .wp-block-media-text__content .has-background p.has-base-color.has-text-color {
+  margin-bottom: 5px !important;
+}
+.page-id-1008 main .nf-form-cont {
+  border: none;
+  padding: 0 !important;
+}
+.page-id-1008 main .nf-form-cont h3 {
+  display: none;
+}
+
+/*Allgemein todo überführen in CHild*/
+.aufzaehlung {
+  max-width: 940px;
+}
+.aufzaehlung > div {
+  justify-content: flex-start;
+  gap: 0;
+  box-shadow: 10px 10px 40px rgba(30, 21, 34, 0.1019607843);
+  margin-bottom: 40px;
+}
+.aufzaehlung > div > p {
+  background-color: var(--wp--preset--color--tertiary);
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 0 !important;
+}
+.aufzaehlung > div > div {
+  padding-left: 40px;
+  padding-right: 40px;
+  gap: 0;
+}
+.aufzaehlung > div > div > p:first-child {
+  margin-bottom: 5px !important;
+}/*# sourceMappingURL=style.css.map */
