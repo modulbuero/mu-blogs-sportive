@@ -9,7 +9,21 @@
   --has-large-font-size:39px;
   --wp--preset--font-size--large:var(--has-large-font-size);
 }
-.page-id-1008 header, .page-id-1008 footer {
+.page-id-1008 header .parts-header > div > div {
+  justify-content: space-between;
+  width: 100%;
+}
+.page-id-1008 header .parts-header > div > div:after {
+  content: "";
+  display: block;
+  height: 60px;
+  width: 185px;
+  background-image: url(https://das-sportive-internet.de/wp-content/uploads/2026/04/89_1_logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.page-id-1008 header .wp-block-navigation {
   display: none !important;
 }
 .page-id-1008 main {
@@ -33,6 +47,10 @@
 .page-id-1008 main .wp-block-table {
   max-width: var(--satzspiegel-short);
   box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.1019607843);
+  padding: 0 !important;
+}
+.page-id-1008 main .wp-block-table table {
+  min-width: auto;
 }
 .page-id-1008 main .wp-block-table table tbody tr td:last-child,
 .page-id-1008 main .wp-block-table table thead tr th:last-child {
@@ -51,6 +69,12 @@
   font-weight: 400 !important;
   font-size: 18px;
 }
+.page-id-1008 main .wp-block-table table tr td:last-child,
+.page-id-1008 main .wp-block-table table tr th:last-child,
+.page-id-1008 main .wp-block-table table tr th:first-child,
+.page-id-1008 main .wp-block-table table tr td:first-child {
+  width: auto;
+}
 .page-id-1008 main .vorteile.mb-scrollHorizontal > div {
   background-color: rgba(0, 0, 0, 0.0588235294) !important;
 }
@@ -64,15 +88,29 @@
 }
 .page-id-1008 main .wp-block-post-content .zwei-pakete > div {
   box-shadow: none !important;
-  padding-bottom: 60px;
 }
-.page-id-1008 main .wp-block-post-content .zwei-pakete > div .bi-arrow-right {
+.page-id-1008 main .wp-block-post-content .zwei-pakete > div .mbgi-block-bootstrap-icon {
+  align-items: flex-start;
+}
+.page-id-1008 main .wp-block-post-content .zwei-pakete > div .mbgi-block-bootstrap-icon .bi-arrow-right {
+  top: 2px;
   line-height: 1;
   font-size: 24px !important;
 }
 .page-id-1008 main .wp-block-post-content .zwei-pakete > div:nth-child(2):before {
+  content: "" !important;
+}
+.page-id-1008 main .wp-block-post-content .zwei-pakete > div.mit-empfehlung:before {
   content: "Empfehlung" !important;
   font-weight: 600;
+}
+@media (max-width: 1112px) {
+  .page-id-1008 main .wp-block-post-content .zwei-pakete > div.mit-empfehlung:before {
+    top: -22px;
+  }
+}
+.page-id-1008 main .wp-block-post-content .zwei-pakete.ohne-button > div {
+  padding-bottom: 60px;
 }
 .page-id-1008 main .wp-block-media-text__content .has-background p.has-base-color.has-text-color {
   margin-bottom: 5px !important;
@@ -83,6 +121,20 @@
 }
 .page-id-1008 main .nf-form-cont h3 {
   display: none;
+}
+@media (max-width: 1280px) {
+  .page-id-1008 main h1, .page-id-1008 main h2 {
+    font-size: 85px;
+    margin-bottom: 25px !important;
+  }
+}
+@media (max-width: 768px) {
+  .page-id-1008 main {
+    --wp--preset--font-size--large: 30px !important;
+  }
+  .page-id-1008 main h1, .page-id-1008 main h2 {
+    font-size: 60px !important;
+  }
 }
 
 /*Allgemein todo überführen in CHild*/
