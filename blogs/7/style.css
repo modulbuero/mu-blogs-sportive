@@ -343,6 +343,21 @@ h1 + .wp-block-cover.alignfull {
   display: none;
 }
 
+/*Vorstandskacheln*/
+.shortcode-vorstandinfos {
+  display: flex;
+  gap: 30px;
+}
+.shortcode-vorstandinfos > a {
+  border: 1px solid #000;
+  padding: 20px;
+  border-radius: var(--sv-setzten-radius);
+}
+.shortcode-vorstandinfos > a .content *:last-child {
+  margin-bottom: 0;
+}
+
+/*Kontakt Formular*/
 .kontakt form {
   margin: 0 auto var(--abstandUntenContainer);
 }

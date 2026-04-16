@@ -4,7 +4,6 @@
  * Anpassung eines benutzerdefinierten Felder für Mitglieder
  */
 add_filter('nf_member_custom_fields', 'svsetzten_custom_fields_anpassung');
-
 function svsetzten_custom_fields_anpassung($custom_fields) {
     // Beispiel: Neues Feld hinzufügen
     $custom_fields['nf_abteilung'] = [
@@ -23,6 +22,7 @@ function svsetzten_custom_fields_anpassung($custom_fields) {
 /**
  * CPT Vorstandsinfos
  */
+add_action('init', 'create_custom_post_type_vorstandsinfo');
 function create_custom_post_type_vorstandsinfo() {
 
     $labels = array(
@@ -56,8 +56,6 @@ function create_custom_post_type_vorstandsinfo() {
     register_post_type('vorstandinfos', $args);
 }
 
-add_action('init', 'create_custom_post_type_vorstandsinfo');
-
 /**
  * Shortcode für Vorstandsinfos
  */
@@ -65,12 +63,13 @@ function shortcode_zeige_letzten_vorstandsinfo($atts) {
 
     $atts = shortcode_atts(array(
         'post_type' => 'vorstandinfos', // optional: CPT angeben
+        'maximal'   => 3, // Standardwert
     ), $atts);
 
     $args = array(
         'post_type'      => $atts['post_type'],
+        'posts_per_page' => intval($atts['maximal']),
         'post_status'    => 'publish',
-        'posts_per_page' => 1,
         'orderby'        => 'date',
         'order'          => 'DESC',
     );
@@ -78,11 +77,17 @@ function shortcode_zeige_letzten_vorstandsinfo($atts) {
     $query = new WP_Query($args);
 
     if ($query->have_posts()) {
-        $query->the_post();
+        
         $output = '<h2>Der Vorstand informiert</h2>';
-        $output .= '<div class="shortcode-beitrag block-distance-bottom">';
-        $output .= '<h3>' . esc_html(get_the_title()) . '</h3>';
-        $output .= '<div class="content">' . apply_filters('the_content', get_the_content()) . '</div>';
+        $output .= '<div class="shortcode-vorstandinfos block-distance-bottom">';
+
+        while ($query->have_posts()) {
+            $query->the_post();
+            $output .= '<a href="' . get_permalink() . '">';
+            $output .= '<h3>' . esc_html(get_the_title()) . '</h3>';
+            $output .= '<div class="content">' . apply_filters('the_content', get_the_content()) . '</div>';
+            $output .= '</a>';
+        }
         $output .= '</div>';
 
         wp_reset_postdata();

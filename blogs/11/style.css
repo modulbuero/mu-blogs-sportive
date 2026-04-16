@@ -24,7 +24,7 @@ header #menu-hauptmenue li:last-child {
 main {
   /*Fonts*/
   --wp--preset--font-size--x--large:60px;
-  --wp--preset--font-size--large:40px;
+  --wp--preset--font-size--large:38px;
   --wp--preset--font-size--medium:20px;
   --wp--preset--font-size--small:16px;
   --paragraph: --wp--preset--font-size--small;
@@ -131,17 +131,17 @@ main {
   /*Hero*/
 }
 main .mbfse-hero {
-  height: calc(100vh - 144px);
+  height: calc(100vh - 135px);
   margin-top: -70px;
 }
 main .mbfse-hero .wp-block-cover__inner-container {
   margin-left: 0;
   width: 50%;
   margin-top: auto !important;
-  margin-bottom: auto;
+  margin-bottom: 30px;
 }
 main .mbfse-hero .wp-block-cover__inner-container .has-white-background-color {
-  padding: 70px;
+  padding: 40px;
 }
 @media (max-width: 1280px) {
   main .mbfse-hero {
@@ -355,6 +355,15 @@ main .wp-block-gallery.columns-6.mb-lightbox figure {
   main .wp-block-gallery.columns-6 {
     grid-template-columns: repeat(2, 1fr) !important;
   }
+}
+main .wp-block-gallery.vereinslogo-gallery.has-nested-images.columns-5 figure.wp-block-image:not(#individual-image) {
+  margin-bottom: unset;
+  max-height: 80px;
+}
+main .wp-block-gallery.vereinslogo-gallery.has-nested-images.columns-5 figure.wp-block-image:not(#individual-image) img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 100%;
 }
 
 body:not(.home) main h1 {
