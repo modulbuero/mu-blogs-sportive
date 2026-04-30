@@ -441,6 +441,9 @@ footer .menu a:after {
   margin-right: 0 !important;
   max-width: 100% !important;
 }
+.swiper-numberpagination .swiper-slide {
+  padding: 0 50px;
+}
 .swiper-numberpagination .swiper-button-next,
 .swiper-numberpagination .swiper-button-prev {
   background-color: #000;
@@ -462,7 +465,7 @@ footer .menu a:after {
   --swiper-pagination-bullet-width:auto;
   opacity: 1;
   background-color: transparent;
-  font-size: 70px;
+  font-size: 60px;
   color: #fff;
   font-weight: 700;
   font-style: italic;
@@ -472,7 +475,7 @@ footer .menu a:after {
   transition: all 0.3s ease;
 }
 .swiper-numberpagination .swiper-pagination .butzeck-bulletpoints.swiper-pagination-bullet-active {
-  font-size: 140px;
+  font-size: 110px;
 }
 @media (max-width: 1112px) {
   .swiper-numberpagination .swiper-pagination {
@@ -613,7 +616,7 @@ footer #block-7 > div > div:last-child .widget_nav_menu a:hover {
   }
 }
 footer .sport-ehrenamt {
-  top: -270px;
+  top: -200px;
 }
 
 .home .mbgi-block-stoerer {

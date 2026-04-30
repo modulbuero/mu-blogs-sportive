@@ -466,6 +466,11 @@ footer .menu a:after {
             // column-count: 2;
         }
     }
+
+    .swiper-slide{
+        padding:0 50px;
+    }
+
     .swiper-button-next, 
     .swiper-button-prev{
         background-color: #000;
@@ -487,7 +492,7 @@ footer .menu a:after {
             --swiper-pagination-bullet-width:auto;
             opacity:1;
             background-color: transparent;
-            font-size: 70px;
+            font-size: 60px;
             color:#fff;
             font-weight: 700;
             font-style: italic;
@@ -497,7 +502,7 @@ footer .menu a:after {
             transition: all .3s ease;
 
             &.swiper-pagination-bullet-active{
-                font-size: 140px;
+                font-size: 110px;
             }
         }
 
@@ -650,7 +655,7 @@ footer{
     }
 
     .sport-ehrenamt{
-        top:-270px
+        top:-200px
     }
 }
 

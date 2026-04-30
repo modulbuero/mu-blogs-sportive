@@ -301,7 +301,57 @@ main{
         }
     }
     
+    
 }
+
+/*98plus1*/
+.woocommerce{
+    --minute-selected-bgcolor: var(--sekundaerfarbe);
+    --minute-border-color: var(--sekundaerfarbe);
+    --colorTableRow: #fbfbfb;
+    --colorTableHead:#cfcfcf
+}
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt{
+    background-color:    var(--sekundaerfarbe);
+    border:1px solid var(--sekundaerfarbe);
+    
+    &:hover{
+        background-color: #fff;
+        color: #000;
+        border:1px solid var(--sekundaerfarbe);
+    }
+}
+.single-product{
+    .product_title.entry-title + .price{
+        display:none;
+    }
+}
+
+span, strong, sup, li, em {
+    color: #000;
+}
+
+.pluspaket{
+    >div{
+        padding: 20px;
+        background-color: #ededed;
+        border: 1px solid #c2c2c2;
+
+        ul{
+            list-style-type: none;
+
+            li{
+                &::before {
+                    content: "✓";
+                    position: absolute;
+                    left: -25px;
+                    font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+
 
 /*DSI Werbebanner Hero*/
 h1 + .wp-block-cover.alignfull{
@@ -376,6 +426,10 @@ h1 + .wp-block-cover.alignfull{
                 margin-bottom: 0;
             }
         }
+    }
+
+    @media (max-width: 601px){
+    flex-direction: column;
     }
 }
 
