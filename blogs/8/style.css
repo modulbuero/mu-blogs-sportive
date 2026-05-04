@@ -104,6 +104,25 @@ body .nf-form-content .submit-wrap .nf-field-element input[type=submit] {
   font-size: 18px;
   border: 2px solid var(--linkfarbe);
 }
+body .mb-popup {
+  --mb-popup-close-btn-color: #ffffff;
+}
+body .mb-popup.ftg-popup {
+  --mb-popup-bgcolor:transparent;
+}
+@media screen and (min-width: 769px) {
+  body .mb-popup.ftg-popup .mb-popup-inner {
+    max-width: 50vw;
+  }
+}
+body .mb-popup.ftg-popup .mb-popup-inner {
+  display: flex;
+  gap: 60px;
+  flex-direction: column;
+}
+body .mb-popup.ftg-popup .mb-popup-inner > * {
+  margin-bottom: 0;
+}
 
 header {
   background: rgba(0, 0, 0, 0.9);
