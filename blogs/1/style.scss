@@ -189,3 +189,44 @@
         }
     }
 }
+
+.page-id-1091 {
+    $third-table-body-font-size: 18px;
+    $third-table-header-font-size: 28px;
+
+    .third-table {
+        max-width: 1170px ;
+        table {
+            // Body cells
+            td {
+                background-color: #fff !important;
+                width: auto !important;
+                font-weight: 400;
+                font-size: $third-table-body-font-size;
+                padding: 50px !important;
+            }
+
+            // First column (labels)
+            td:first-child {
+                font-weight: 700;
+            }
+
+            // First row as a header row visually
+            tr:first-child {
+                border-bottom: 3px solid var(--wp--preset--color--tertiary);
+
+            td {
+                font-size: $third-table-header-font-size;
+                font-weight: 500;
+            }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1420px){
+    main .wp-block-group.alignfull:not(.swiper-slide):not(.mbfse-hero){
+padding-right: var(--wp--style--root--padding-right);
+ padding-left: var(--wp--style--root--padding-left);
+}
+}

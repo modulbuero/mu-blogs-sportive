@@ -166,4 +166,32 @@
 }
 .aufzaehlung > div > div > p:first-child {
   margin-bottom: 5px !important;
+}
+
+.page-id-1091 .third-table {
+  max-width: 1170px;
+}
+.page-id-1091 .third-table table td {
+  background-color: #fff !important;
+  width: auto !important;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 50px !important;
+}
+.page-id-1091 .third-table table td:first-child {
+  font-weight: 700;
+}
+.page-id-1091 .third-table table tr:first-child {
+  border-bottom: 3px solid var(--wp--preset--color--tertiary);
+}
+.page-id-1091 .third-table table tr:first-child td {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 1420px) {
+  main .wp-block-group.alignfull:not(.swiper-slide):not(.mbfse-hero) {
+    padding-right: var(--wp--style--root--padding-right);
+    padding-left: var(--wp--style--root--padding-left);
+  }
 }/*# sourceMappingURL=style.css.map */
