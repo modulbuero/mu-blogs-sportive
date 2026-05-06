@@ -194,6 +194,22 @@
 .page-id-1091 .wp-block-buttons .wp-block-button {
   border: 2px solid #FFFFFF;
 }
+.page-id-1091 .nf-form-cont {
+  max-width: var(--satzspiegel);
+  border: none;
+  padding: 0 !important;
+}
+.page-id-1091 .nf-form-cont .nf-field-element {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.page-id-1091 .nf-form-cont .nf-field-element input:not([type=submit]) {
+  background-color: rgba(189, 212, 242, 0.3019607843);
+}
+.page-id-1091 .nf-form-cont .nf-field-element input[type=submit] {
+  max-width: 400px;
+}
 
 @media screen and (max-width: 1420px) {
   main .wp-block-group.alignfull:not(.swiper-slide):not(.mbfse-hero) {

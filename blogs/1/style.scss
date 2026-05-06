@@ -227,6 +227,23 @@
             border: 2px solid #FFFFFF;
         }
     }
+
+    .nf-form-cont {
+        max-width: var(--satzspiegel);
+        border: none;
+        padding: 0 !important;
+        .nf-field-element {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .nf-field-element input:not([type="submit"]) {
+            background-color: #BDD4F24D;
+        }
+        .nf-field-element input[type="submit"] {
+            max-width: 400px;
+        }
+    }
 }
 
 @media screen and (max-width: 1420px){
