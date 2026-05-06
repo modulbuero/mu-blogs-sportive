@@ -197,7 +197,6 @@
     .third-table {
         max-width: 1170px ;
         table {
-            // Body cells
             td {
                 background-color: #fff !important;
                 width: auto !important;
@@ -206,12 +205,10 @@
                 padding: 50px !important;
             }
 
-            // First column (labels)
             td:first-child {
                 font-weight: 700;
             }
 
-            // First row as a header row visually
             tr:first-child {
                 border-bottom: 3px solid var(--wp--preset--color--tertiary);
 
