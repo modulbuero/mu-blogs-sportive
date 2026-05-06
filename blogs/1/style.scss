@@ -202,7 +202,7 @@
                 width: auto !important;
                 font-weight: 400;
                 font-size: $third-table-body-font-size;
-                padding: 50px !important;
+                padding: 35px;
             }
 
             td:first-child {
@@ -211,12 +211,20 @@
 
             tr:first-child {
                 border-bottom: 3px solid var(--wp--preset--color--tertiary);
+                td {
+                    font-size: $third-table-header-font-size;
+                    font-weight: 500;
+                }
+            }
+            tr:last-child td{
+                border-bottom: none !important;
+            }
+        }
+    }
 
-            td {
-                font-size: $third-table-header-font-size;
-                font-weight: 500;
-            }
-            }
+    .wp-block-buttons {
+        .wp-block-button {
+            border: 2px solid #FFFFFF;
         }
     }
 }
@@ -226,4 +234,8 @@
 padding-right: var(--wp--style--root--padding-right);
  padding-left: var(--wp--style--root--padding-left);
 }
+}
+
+.short-width {
+    max-width: var(--satzspiegel);
 }

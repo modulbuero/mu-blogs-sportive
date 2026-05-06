@@ -176,7 +176,7 @@
   width: auto !important;
   font-weight: 400;
   font-size: 18px;
-  padding: 50px !important;
+  padding: 35px;
 }
 .page-id-1091 .third-table table td:first-child {
   font-weight: 700;
@@ -188,10 +188,19 @@
   font-size: 28px;
   font-weight: 500;
 }
+.page-id-1091 .third-table table tr:last-child td {
+  border-bottom: none !important;
+}
+.page-id-1091 .wp-block-buttons .wp-block-button {
+  border: 2px solid #FFFFFF;
+}
 
 @media screen and (max-width: 1420px) {
   main .wp-block-group.alignfull:not(.swiper-slide):not(.mbfse-hero) {
     padding-right: var(--wp--style--root--padding-right);
     padding-left: var(--wp--style--root--padding-left);
   }
+}
+.short-width {
+  max-width: var(--satzspiegel);
 }/*# sourceMappingURL=style.css.map */
