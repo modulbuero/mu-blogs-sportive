@@ -321,6 +321,16 @@ span, strong, sup, li, em {
   font-weight: bold;
 }
 
+.wc-block-components-button.wc-block-components-checkout-place-order-button {
+  background-color: transparent;
+}
+.wc-block-components-button.wc-block-components-checkout-place-order-button:hover {
+  background-color: var(--sekundaerfarbe);
+}
+.wc-block-components-button.wc-block-components-checkout-place-order-button:hover div {
+  color: #fff;
+}
+
 /*DSI Werbebanner Hero*/
 h1 + .wp-block-cover.alignfull {
   overflow: inherit;
