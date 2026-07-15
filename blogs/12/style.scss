@@ -1,0 +1,607 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto-thin-italic';
+    src: url('Roboto-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+/*Variable*/
+body{
+    --backgroundMenuItemHover:#000;
+    --abstandMenuItem: 15px;
+    --headline-2:39px;
+    --headline-3:20px;
+    --wp--preset--font-size--large:var(--headline-2);
+    --backgroundHeader: #000000e8 !important;
+    .woocommerce-cart{
+        --colorTableHead:#8b8b8c;
+    }
+    
+    h1, h2, h3{
+        text-transform: uppercase;
+    }
+}
+
+/*Header/Menü*/
+body.mb-transp-header{
+    header:not(.set-bgcolor){
+        box-shadow: inset 0px 65px 30px -30px #00000042 !important;
+    }
+    
+    /*Menüpunkte*/
+    header .widget_nav_menu ul li{
+        a{
+            text-transform: uppercase;
+        }
+        //Children Icon
+        &.menu-item-has-children{
+            >a:after{
+                content: "\F282";
+                font-family: "bootstrap-icons";
+                margin-left: 5px;
+                font-size: 10px;
+            }
+        }
+        //Trenner
+        &.has-tr{
+            &:before{
+                content: '|';
+                color: #fff;
+                font-size: 20px;
+            }
+        }
+        //SoMe
+        &.facebook,
+        &.instagram{
+            a{
+                font-size: 0;
+            }
+            a:after{
+                content:"\F437";
+                font-family: 'bootstrap-icons';
+                font-size: 16px;
+            }
+        }
+        &.facebook a:after{
+            content:"\F344";
+        }
+    }
+}
+
+/* ******************
+    Content
+*/
+//Hat Hero, bzw. kein Titel
+body:not(.home):not(.mb-headline-hide).mb-transp-header{
+    #mb-container{
+        header{
+            background: var(--backgroundHeader);
+        }
+        > main{
+            padding-top: 120px !important;
+        }
+    } 
+}
+
+//Hero
+h1.mb-hide + .wp-block-cover{
+    padding: 0 var(--abstandSeiten);
+    &:before{
+        content:"";
+        width: 100%;
+        height: 100%;
+        top:0;
+        left:0;
+        position: absolute;
+        z-index: 1;
+        background: var(--sekundaerfarbe);
+        background: linear-gradient(58deg, rgba(77, 167, 77, 0.8) 0%, rgb(0 0 0 / 20%) 60%)
+    }
+    .wp-block-cover__inner-container{
+        @media (max-width: 1440px){
+            padding: 0
+        }
+        z-index: 2;
+        h1.wp-block-heading{
+            font-size: 89px;
+            line-height: 1;
+            font-style: italic;
+            font-weight: 600;
+            strong{
+                font-size: 109px;
+                font-style: normal;
+            }
+            em{
+                font-size: 140px;
+                font-weight: 100;
+                font-family: 'Roboto-thin-italic';
+            }
+        }
+        p{
+            font-size: var(--headline-2);
+            text-transform: uppercase;
+        }
+    }   
+}
+
+.post-content div.alignfull:not(.wp-block-cover){
+
+    @media (min-width: 1440px){
+        >*{
+            padding-left: var(--abstandSeiten) !important;
+            padding-right: var(--abstandSeiten) !important;
+        }
+    }
+}
+
+//Button
+.wp-block-buttons .wp-block-button__link{
+    border-radius: 55px;
+    border:1px solid #000;
+    font-weight: 400;
+    &:hover{
+        color:#000
+    }
+}
+
+.single_add_to_cart_button.button{
+    background-color: var(--sekundaerfarbe) !important;
+}
+
+.bi.bi-filetype-pdf{
+    color: #fff;
+    font-size: 28px;
+}
+
+.btn-weisz{
+    &.mb-button-icon.bi:before{
+        color: #000;
+    }
+    &:hover{
+        &:before{
+            color:#fff !important;
+        }
+    }
+            
+    .wp-block-button__link {
+        background-color: #fff !important;
+        color:#000 !important;
+        &:hover{
+            color:#fff !important;
+            background-color: transparent !important;
+            border-color:#fff !important;
+        }
+    }
+}
+
+.mb-button-icon.bi{
+    &:before{
+        right: 20px;
+        top: -2px;
+    }
+    &:hover{
+        &:before{
+            color:#000;
+        }
+    }
+
+    .wp-block-button__link{
+        padding-left:0;
+        padding-right: calc((2 * var(--abstandIcon)) + var(--buttonPaddingLR));
+    }
+}
+
+.wp-block-buttons>.wp-block-button.has-custom-width {
+    min-width: max-content;
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+//Trenner
+main .post-content .wp-block-separator{
+    width: 100% !important;
+    margin:var(--abstandUntenContainer) 0;
+}
+
+//Sponsor-Wrapper
+.first-sponsor.wp-block-group.alignfull {
+    padding:0 !important;
+    position: absolute;
+    z-index: 1;
+    margin-top: -78px;
+    
+    &:before{
+        content:"";
+        display: block;
+        position: absolute;
+        inset: 0;
+        background: black;
+        clip-path: polygon(100% 45%, 100% 100%, 0% 100%);
+    }
+    .wp-block-image{
+        padding: 0 var(--abstandSeiten);
+        img{
+            border-radius: 5px 5px 0 0;
+            border-left: 20px solid #000;
+            border-right: 20px solid #000;
+            border-top: 10px solid #000;
+            border-bottom: 10px solid #000;
+            max-height: 78px;
+            width: auto;
+        }
+    }
+}
+
+//Angebote
+.angebote-wrap{
+    >div.wp-block-group{
+        margin-bottom: 0 !important;
+        overflow: hidden;
+        figure{
+            margin-bottom: 0;
+            transition: all .3s ease;
+            img{
+                width: 100%;
+            }
+        }
+        p{
+            background-color: #000;
+            color:#fff;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 0;
+            text-transform: uppercase;
+        }
+        &:hover{
+            figure{
+                scale:1.1
+            }
+        }
+    }
+}
+
+
+//Mitglied werden
+.mitglieds-wrap.has-background{
+    clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 30px);
+    padding:70px var(--abstandSeiten) !important;
+
+    .wp-element-button{
+        min-width: 260px
+    }
+}
+
+//Sponsorenwand
+.sponsorenwand-wrap{
+    .wp-block-columns {
+        
+        h4.wp-block-heading{
+            background: #000;
+            padding:20px;
+            margin-bottom: 0;
+            color:#fff;
+        }
+        
+        .wp-block-group {
+            ul, p{
+                color:#ffffff
+            }
+            
+            padding:20px;
+            background-color: var(--sekundaerfarbe);
+        }
+        
+        ul.wp-block-list{
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap:5px;
+
+            li{
+                padding-left: 30px;
+
+                &:before {
+                    content: "\F272";
+                    position: absolute;
+                    left: 0;
+                    font-family: 'bootstrap-icons';
+                }
+            }
+        }
+    }
+}
+
+
+/*
+    Loop (short)
+*/
+.loop.mbgi-block-post-loop{
+    .loop-wrapper{
+        .thumbnail{
+            transition: all .3s ease;
+            background-position: top center;
+        }
+        .loop-title{
+            background-color: var(--sekundaerfarbe);
+            width: 100%;
+            justify-content: center;
+            padding: 20px;
+            margin-bottom: 0;
+            flex: 1;
+            font-weight: 400;
+        }
+    }
+}
+
+/*
+    Schrägen
+*/
+.fall-line,
+.grow-line{
+    &.wp-block-group.alignfull{
+        padding:0;
+    }
+    background-color: var(--sekundaerfarbe);
+    height:29px;
+    margin-bottom: 0px !important;
+    
+    &:after{
+        content:"";
+        position: absolute;
+        bottom:0;
+        left:0;
+        width: 100%;
+        height:30px;
+        background-color: black;
+        clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
+    }
+
+    &.is-green{
+        background-color: #000;
+        &:after{
+            background-color: var(--sekundaerfarbe);
+        }
+    }
+    &.is-white{
+        background-color: var(--sekundaerfarbe);
+        &:after{
+            background-color: #fff;
+        }
+    }
+    &.black-white{
+        background-color: #fff;
+        &:after{
+            background-color: #000;
+        }
+    }
+}
+.fall-line{
+    &:after{
+        clip-path: polygon(100% 0%, 100% 100%, 0% 0%);
+    }
+}
+
+/*Beitrag*/
+body.single{
+    .thumb-wrap {
+        .thumbnail{
+            background-size: contain;
+        }
+    }
+    .post-info,
+    .publish-date{
+        display:none
+    }
+}
+
+/*Listenpunkte*/
+.page-content ul{
+    max-width: 1280px;
+    margin-left: 0;
+}
+
+/*Tabelle*/
+main .wp-block-table .has-fixed-layout {
+    border:none;
+    td, th, tr, 
+    td:not(:last-child),
+    tr:not(:last-child){
+        border:none;
+    }
+    
+    td, th{
+        text-align: left;
+        padding:10px;
+    }
+    
+    thead th{
+        background-color: var(--hauptfarbe);
+        color:#fff;
+        strong{
+            font-weight: 400;
+        }
+    }
+}
+
+
+//Subpage
+.mb-subpage{
+    h2{
+        color: var(--sekundaerfarbe);
+    }
+    .page-content{
+        display: flex;
+        justify-content: center;
+        >article{
+            width: 1280px;
+        }
+    }
+}
+
+//Bilder Abstand
+main article .wp-block-image.paragraph-distance-bottom{
+    margin-bottom: var(--abstandUntenHeadline-2) !important;
+}
+
+/*Fupa*/
+.fupa-widget{
+    margin-bottom:60px;
+    .fp-widget-view.fp-widget-view-active{
+        justify-content: flex-start;
+    }
+    #fp-team-matches-view{
+        padding-left: 0;
+        .fp-team-matches-view-module-wrapper{
+            >.fp-subheading-text{
+                color: var(--sekundaerfarbe);
+            }
+        }
+    }
+    
+}
+
+/*fussball.de*/
+.fussballde_widget{
+    iframe{
+        max-width: 970px;
+    }
+}
+
+/* ******************
+    Footer
+*/
+footer{
+    #corporate-copyright,
+    .footer-sidebar-wrap{
+        display:none !important;
+    }
+    .footer-sidebar-backend{
+        >.widget{
+            margin-bottom: 0;
+            >div{
+                >div:nth-child(2){
+                    flex:1
+                }
+            }
+
+            nav ul.menu {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                li a:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+/* ******************
+    Mobile
+*/
+@media (max-width: 1112px) {
+    body{
+        --headline-2:32px;
+    }
+
+    header{
+        #header-logo img {
+            transition: all .3s ease;
+        }
+        &.set-bgcolor{
+            #header-logo img {
+                max-height: 80px;
+            }
+        }
+        .has-tr{
+            display:none !important
+        }
+    }
+
+    h1.mb-hide + .wp-block-cover{
+         .wp-block-cover__inner-container h1.wp-block-heading{
+            font-size: 75px;
+            em{
+                font-size: 120px;
+            }
+            strong{
+                font-size: 82px;
+            }
+        }
+    }
+}
+
+@media (max-width: 834px) {
+    .angebote-wrap.wp-block-group{
+        flex-wrap: wrap;
+        >div{
+            flex-basis: 31%;
+        }
+    }
+
+    .sponsorenwand-wrap{
+        .wp-block-columns .wp-block-column{
+            margin:0 !important;
+            flex-basis:100% !important;
+        }
+    }
+
+    footer{
+        .widget{
+            >div{
+                flex-direction: column-reverse;
+
+                p,
+                .menu-item {
+                    text-align: center;
+                }
+
+                img{
+                    max-width: 100px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 601px){
+    body{
+        --headline-2:24px;
+    }
+
+    h1.mb-hide + .wp-block-cover{
+         .wp-block-cover__inner-container {
+            h1.wp-block-heading{
+                font-size: 38px;
+                em{
+                    font-size: 80px;
+                }
+                strong{
+                    font-size: 60px;
+                }
+            }
+            .has-large-font-size{
+                font-size: 18px !important
+            }
+        }
+    }
+
+    .willkommen-wrap{
+        figure{
+            display:none
+        }
+    }
+
+    .angebote-wrap.wp-block-group > div {
+        flex-basis: 46%;
+    }
+}
