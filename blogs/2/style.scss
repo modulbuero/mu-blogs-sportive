@@ -1,0 +1,84 @@
+body{
+    --colorLinkHover:#171a65;
+    --KarussellMenuBG:#f0fafd;
+    --colorButton:var(--menufarbe);
+}
+/**************************************
+    HEADER
+*/
+header .widget_nav_menu ul.menu > li a{
+    font-size: 16px;
+    font-weight: 800;
+    padding: 0;
+    box-shadow: 0px 0px 0 #000;
+    transition: all 0.3s ease-in-out;
+
+    &:hover{
+        background: transparent;
+        color:#000;
+        box-shadow: 0px 2px 0 #000;
+    }
+}
+
+/**************************************
+    Home
+*/
+.home .mbgi-block-post-loop{
+    --gridColumnDefault:1fr;
+    article{
+        .loop-wrapper{
+            .loop-more,
+            p{
+                box-sizing: border-box;
+                margin: 0;
+                max-width: 100%;
+            }
+            .loop-more{
+                text-decoration:none;
+            }
+        }
+
+        &.has-post-thumbnail{
+            .loop-wrapper{
+                display: block;
+                &::after {
+                    content: "";
+                    display: block;
+                    clear: both;
+                }
+                .thumb-wrap {
+                    float: left;
+                    width: 220px;
+                    margin-right: 20px;
+                    .thumbnail {
+                        padding-bottom:0;
+                        aspect-ratio: 1 / 1;
+                        height: 200px;
+                        width: 200px;
+                    }
+                }
+                .loop-more,
+                p{
+                    flex-grow: 0;
+                    padding-left: 0;
+                    width: calc(100% - 240px);
+                }
+            }
+        }
+    }
+}
+
+/**************************************
+    Elemente
+*/
+//Lupe
+.mbgi-block-bild-lupe .wrap .lupe{
+    background-color:var(--menufarbe);
+}
+
+//Tabs
+.wp-block-modulbuero-tabs.mb-tabs{
+    margin: 0 auto;
+    max-width: var(--textMaxWidth);
+    border: 1px solid #00000024;
+}
