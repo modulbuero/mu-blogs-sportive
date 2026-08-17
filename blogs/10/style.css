@@ -18,15 +18,11 @@ body {
   --wp--style--global--content-size:var(--containerMaxWidth) ;
 }
 
-.satzspiegel {
-  box-sizing: content-box;
-}
-
 /* *************
     Header
 */
 body.mb-transp-header header .widget_nav_menu ul.menu > li a {
-  text-shadow: none;
+  text-shadow: none !important;
   font-weight: 700;
   font-size: var(--sv-small-fontsize);
 }
@@ -143,6 +139,9 @@ header.set-bgcolor .header-sidebar-wrap nav.menu-hauptmenue-container > ul.menu 
     font-size: 50px;
     line-height: 60px;
   }
+}
+.home h1 + p {
+  margin-left: 0 !important;
 }
 .home {
   /*Mannschaft*/
@@ -506,6 +505,61 @@ main .mitglied-banner > div .wp-element-button {
   transform: none !important;
 }
 
+.werbebanner-fluss-1 {
+  max-width: 615px;
+  display: flex;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+.werbebanner-fluss-1 > * {
+  margin-bottom: 0 !important;
+}
+.werbebanner-fluss-1 > p {
+  position: absolute;
+  top: -14px;
+  right: 10px;
+  border: 1px solid #000;
+  border-radius: 55%;
+  padding: 2px;
+  font-size: 15px;
+  width: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1111;
+  cursor: pointer;
+  background-color: #fff;
+}
+.werbebanner-fluss-1 > p:hover {
+  background-color: #000;
+  color: #fff;
+}
+.werbebanner-fluss-1 > div:first-child.has-background {
+  display: flex;
+  align-items: flex-end;
+  padding: 30px 25px !important;
+}
+.werbebanner-fluss-1 > div:first-child.has-background img {
+  width: 76px;
+}
+.werbebanner-fluss-1 > div:last-child {
+  padding: 40px 35px;
+}
+.werbebanner-fluss-1 > div:last-child p {
+  font-size: 15px;
+}
+.werbebanner-fluss-1 > div:last-child > p:first-child {
+  font-size: 26px;
+  font-weight: 700;
+}
+.werbebanner-fluss-1 > div:last-child .wp-block-button__link {
+  background-color: #000;
+  color: #fff;
+}
+.werbebanner-fluss-1 > div:last-child .wp-block-button__link:hover {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
 .kontakt-stipe,
 .kontaktwrap {
   z-index: 10;
@@ -530,6 +584,9 @@ footer {
   --backgroundFooter:#000;
   z-index: 11111;
 }
+footer .satzspiegel {
+  box-sizing: border-box;
+}
 footer .footer-sidebar-backend > div > div * {
   color: white;
   font-size: var(--sv-small-fontsize);
@@ -542,7 +599,7 @@ footer .footer-sidebar-backend > div > div > figure.mb-logo {
   display: flex;
   gap: 24px;
 }
-footer .footer-sidebar-backend > div > div > figure.mb-logo:after {
+footer .footer-sidebar-backend > div > div > figure.mb-logo:before {
   content: "";
   position: relative;
   display: block;

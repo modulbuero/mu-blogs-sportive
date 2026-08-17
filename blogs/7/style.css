@@ -20,7 +20,7 @@ body {
     Header
 */
 body.mb-transp-header header .widget_nav_menu ul.menu > li a {
-  text-shadow: none;
+  text-shadow: none !important;
   font-weight: 700;
   font-size: var(--sv-small-fontsize);
 }
@@ -73,6 +73,9 @@ header nav.menu-hauptmenue-container > ul.menu li.menu-item-search:hover a .bi-s
 }
 header nav.menu-hauptmenue-container > ul.menu li.menu-item-search:hover a .bi-search:before {
   color: #fff;
+}
+header nav.menu-hauptmenue-container .widget_nav_menu ul.menu li a {
+  text-shadow: none !important;
 }
 header .mbto-before-menu {
   filter: invert(1);
@@ -367,6 +370,72 @@ h1 + .wp-block-cover.alignfull {
 @media (max-width: 480px) {
   .dsi-werber.view {
     left: 0;
+  }
+}
+
+.dsi-werber-26 {
+  position: fixed;
+  z-index: 9999;
+  right: -100vh;
+  bottom: 5vh;
+  max-width: 300px;
+  box-shadow: -15px 15px 25px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+.dsi-werber-26 > * {
+  margin-bottom: 0 !important;
+}
+.dsi-werber-26 > p {
+  position: absolute;
+  top: -14px;
+  right: 10px;
+  border: 1px solid #000;
+  border-radius: 55%;
+  padding: 2px;
+  font-size: 15px;
+  width: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1111;
+  cursor: pointer;
+  background-color: #fff;
+}
+.dsi-werber-26 > p:hover {
+  background-color: #000;
+  color: #fff;
+}
+.dsi-werber-26 > div:first-child.has-background {
+  padding: 25px 30px !important;
+}
+.dsi-werber-26 > div:first-child.has-background img {
+  width: 166px;
+}
+.dsi-werber-26 > div:last-child {
+  padding: 30px 35px;
+}
+.dsi-werber-26 > div:last-child p {
+  font-size: 15px;
+}
+.dsi-werber-26 > div:last-child > p:first-child {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.dsi-werber-26 > div:last-child .wp-block-button__link {
+  background-color: #000;
+  color: #fff;
+}
+.dsi-werber-26 > div:last-child .wp-block-button__link:hover {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+.dsi-werber-26.view {
+  right: 0;
+}
+@media (max-width: 601px) {
+  .dsi-werber-26 {
+    bottom: 2vh;
   }
 }
 

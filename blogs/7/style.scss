@@ -19,7 +19,7 @@ body{
     Header
 */
 body.mb-transp-header header .widget_nav_menu ul.menu > li a{
-    text-shadow: none;
+    text-shadow: none !important;
     font-weight: 700;
     font-size: var(--sv-small-fontsize);
 }
@@ -91,6 +91,10 @@ header{
                     }
                 }
             }
+        }
+
+        .widget_nav_menu ul.menu li a{
+            text-shadow: none !important;
         }
     }
 
@@ -394,6 +398,76 @@ h1 + .wp-block-cover.alignfull{
         }
     }
     
+}
+.dsi-werber-26{
+    position: fixed;
+    z-index: 9999;
+    right: -100vh;
+    bottom: 5vh;
+    max-width: 300px;
+    box-shadow: -15px 15px 25px #00000033;
+    transition: all .3s ease;
+    >*{
+        margin-bottom: 0 !important;
+    }
+
+    //Schließen Button
+    >p{
+        position: absolute;
+        top: -14px;
+        right: 10px;
+        border: 1px solid #000;
+        border-radius: 55%;
+        padding: 2px;
+        font-size: 15px;
+        width: 28px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1111;
+        cursor: pointer;
+        background-color: #fff;
+        &:hover{
+            background-color: #000;
+            color:#fff
+        }
+    }
+
+    //Bildcontainer
+    >div:first-child.has-background{
+        padding: 25px 30px !important;
+        img{
+            width: 166px;
+        }
+    }
+
+    //Textcontainer
+    >div:last-child{
+        padding: 30px 35px;
+        p{
+            font-size: 15px;
+        }
+        >p:first-child{
+            font-size: 26px;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+        .wp-block-button__link{
+            background-color: #000;
+            color: #fff;
+            &:hover{
+                background-color: #fff !important;
+                color: #000 !important;
+            }
+        }
+    }
+    &.view{
+        right: 0;
+    }
+
+    @media (max-width: 601px){
+        bottom: 2vh;
+    }
 }
 
 
