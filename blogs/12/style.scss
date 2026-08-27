@@ -57,6 +57,7 @@ body.mb-transp-header{
             }
         }
         //SoMe
+        &.calendar,
         &.facebook,
         &.instagram{
             a{
@@ -70,6 +71,9 @@ body.mb-transp-header{
         }
         &.facebook a:after{
             content:"\F344";
+        }
+        &.calendar a:after{
+            content:"\F214";
         }
     }
 }

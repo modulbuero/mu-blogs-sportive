@@ -48,16 +48,19 @@ body.mb-transp-header header .widget_nav_menu ul li.has-tr:before {
   color: #fff;
   font-size: 20px;
 }
-body.mb-transp-header header .widget_nav_menu ul li.facebook a, body.mb-transp-header header .widget_nav_menu ul li.instagram a {
+body.mb-transp-header header .widget_nav_menu ul li.calendar a, body.mb-transp-header header .widget_nav_menu ul li.facebook a, body.mb-transp-header header .widget_nav_menu ul li.instagram a {
   font-size: 0;
 }
-body.mb-transp-header header .widget_nav_menu ul li.facebook a:after, body.mb-transp-header header .widget_nav_menu ul li.instagram a:after {
+body.mb-transp-header header .widget_nav_menu ul li.calendar a:after, body.mb-transp-header header .widget_nav_menu ul li.facebook a:after, body.mb-transp-header header .widget_nav_menu ul li.instagram a:after {
   content: "\f437";
   font-family: "bootstrap-icons";
   font-size: 16px;
 }
 body.mb-transp-header header .widget_nav_menu ul li.facebook a:after {
   content: "\f344";
+}
+body.mb-transp-header header .widget_nav_menu ul li.calendar a:after {
+  content: "\f214";
 }
 
 /* ******************
